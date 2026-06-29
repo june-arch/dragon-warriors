@@ -1,5 +1,5 @@
-import { Suspense, useRef, useMemo } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Suspense, useRef, useMemo, useEffect } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 import DragonModel from './DragonModel'
@@ -67,6 +67,28 @@ function Stars() {
   )
 }
 
+function ResponsiveCamera() {
+  const { viewport, camera } = useThree()
+
+  useEffect(() => {
+    const cam = camera as THREE.PerspectiveCamera
+    const w = viewport.width
+    if (w < 5) {
+      cam.position.set(0, 0.5, 4.5)
+      cam.fov = 55
+    } else if (w < 8) {
+      cam.position.set(0, 0.6, 3.8)
+      cam.fov = 52
+    } else {
+      cam.position.set(0, 0.8, 3.2)
+      cam.fov = 50
+    }
+    cam.updateProjectionMatrix()
+  }, [viewport.width, camera])
+
+  return null
+}
+
 export default function DragonCanvas({ progress = 0 }: Props) {
   return (
     <div
@@ -78,7 +100,6 @@ export default function DragonCanvas({ progress = 0 }: Props) {
       }}
     >
       <Canvas
-        camera={{ position: [0, 0.8, 3.2], fov: 50, near: 0.1, far: 20 }}
         dpr={[1, 1.5]}
         gl={{
           antialias: true,
@@ -88,6 +109,7 @@ export default function DragonCanvas({ progress = 0 }: Props) {
         style={{ background: 'transparent' }}
       >
         <Suspense fallback={null}>
+          <ResponsiveCamera />
           <DragonEnvironment />
           <Stars />
           <DragonModel progress={progress} />
