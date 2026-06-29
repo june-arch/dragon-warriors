@@ -108,7 +108,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 h-20 md:h-24">
         <a href="#" className="flex items-center">
           <img
-            src="/logo.png"
+            src="/logo-header.png"
             alt="Dragon Warriors"
             className="h-20 md:h-24 w-auto"
           />
