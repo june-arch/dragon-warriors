@@ -42,7 +42,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 
 export default function MerchandiseSection() {
   return (
-    <section id="merchandise" data-testid="merchandise-section" className="section-padding bg-bg-surface">
+    <section id="merchandise" data-testid="merchandise-section" className="section-padding bg-bg-surface relative z-[1]">
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">

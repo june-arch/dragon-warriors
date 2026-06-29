@@ -29,7 +29,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-bg-void border-t border-gold/20 overflow-hidden">
+    <footer className="relative bg-bg-void border-t border-gold/20 overflow-hidden z-[1]">
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{

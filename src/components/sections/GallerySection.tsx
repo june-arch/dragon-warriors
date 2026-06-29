@@ -21,7 +21,7 @@ export default function GallerySection() {
   )
 
   return (
-    <section id="gallery" className="section-padding bg-bg-void">
+    <section id="gallery" className="section-padding bg-bg-void relative z-[1]">
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">
