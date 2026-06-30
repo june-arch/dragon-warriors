@@ -37,21 +37,47 @@ function ScheduleRow({ item }: { item: typeof JADWAL[0] }) {
   return (
     <motion.div
       variants={rowVariants}
-      className="grid grid-cols-12 gap-4 px-6 py-5 items-center hover:bg-gold/[0.03] transition-colors duration-300"
+      className="px-5 py-4 md:px-6 md:py-5 hover:bg-gold/[0.03] transition-colors duration-300"
     >
-      <div className="col-span-2 font-display font-bold text-sm md:text-base text-ash">
-        {item.hari}
+      {/* Mobile: stacked layout */}
+      <div className="md:hidden space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="font-display font-bold text-base text-ash">
+            {item.hari}
+          </span>
+          <span className="font-mono text-xs text-cyan-dim flex items-center gap-1.5">
+            <Clock size={12} />
+            {item.waktu}
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="font-body text-sm text-ash-muted">
+            {item.jenis}
+          </span>
+          <span className="text-gold/30">·</span>
+          <span className="font-body text-sm text-ash-muted flex items-center gap-1">
+            <MapPin size={11} className="text-gold shrink-0" />
+            {item.tempat}
+          </span>
+        </div>
       </div>
-      <div className="col-span-3 flex items-center gap-2 font-mono text-sm text-cyan-dim">
-        <Clock size={13} />
-        {item.waktu}
-      </div>
-      <div className="col-span-3 font-body text-sm text-ash-muted">
-        {item.jenis}
-      </div>
-      <div className="col-span-4 flex items-center gap-2 font-body text-sm text-ash-muted">
-        <MapPin size={13} className="text-gold shrink-0" />
-        {item.tempat}
+
+      {/* Desktop: table layout */}
+      <div className="hidden md:grid md:grid-cols-12 md:gap-4 md:items-center">
+        <div className="col-span-2 font-display font-bold text-base text-ash">
+          {item.hari}
+        </div>
+        <div className="col-span-3 flex items-center gap-2 font-mono text-sm text-cyan-dim">
+          <Clock size={13} />
+          {item.waktu}
+        </div>
+        <div className="col-span-3 font-body text-base text-ash-muted">
+          {item.jenis}
+        </div>
+        <div className="col-span-4 flex items-center gap-2 font-body text-base text-ash-muted">
+          <MapPin size={13} className="text-gold shrink-0" />
+          {item.tempat}
+        </div>
       </div>
     </motion.div>
   )
@@ -81,9 +107,10 @@ export default function JadwalSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-30px' }}
-            className="border border-gold/20 divide-y divide-gold/10"
+            className="border border-gold/20 divide-y divide-gold/10 rounded-xl overflow-hidden"
           >
-            <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-bg-raised/50">
+            {/* Table header — hidden on mobile */}
+            <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-bg-raised/50">
               <div className="col-span-2 font-mono text-xs tracking-[0.25em] uppercase text-gold">Hari</div>
               <div className="col-span-3 font-mono text-xs tracking-[0.25em] uppercase text-gold">Waktu</div>
               <div className="col-span-3 font-mono text-xs tracking-[0.25em] uppercase text-gold">Jenis</div>
@@ -100,7 +127,7 @@ export default function JadwalSection() {
             <h3 className="font-display text-xl md:text-2xl font-bold text-ash mb-3">
               Acara Mendatang
             </h3>
-            <div className="border border-gold/20 p-6 md:p-8 hover:border-gold/40 transition-colors duration-300">
+            <div className="border border-gold/20 p-6 md:p-8 hover:border-gold/40 transition-colors duration-300 rounded-xl">
               <div className="flex items-center gap-3 mb-3">
                 <Fence size={18} className="text-fire shrink-0" />
                 <h4 className="font-display font-bold text-base md:text-lg text-ash">

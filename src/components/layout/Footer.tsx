@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-18">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8">
           <div>
             <img
               src="/logo.png"

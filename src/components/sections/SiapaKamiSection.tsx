@@ -57,7 +57,7 @@ export default function SiapaKamiSection() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12">
           <SectionReveal className="lg:col-span-3">
             <div className="space-y-5">
               <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
@@ -88,7 +88,7 @@ export default function SiapaKamiSection() {
           </SectionReveal>
 
           <SectionReveal delay={0.2} className="lg:col-span-2">
-            <div className="border border-gold/20 p-6 md:p-8 space-y-5">
+            <div className="border border-gold/20 p-6 md:p-8 space-y-5 rounded-xl">
               <h3 className="font-display font-bold text-lg text-ash">
                 Info Kontak
               </h3>

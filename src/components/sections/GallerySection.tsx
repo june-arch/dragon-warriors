@@ -305,7 +305,7 @@ export default function GallerySection() {
         </SectionReveal>
 
         <SectionReveal delay={0.15}>
-          <div className="flex flex-wrap gap-1.5 md:gap-2 mb-6 md:mb-12 justify-center">
+          <div className="flex flex-wrap gap-2 md:gap-2 mb-6 md:mb-12 justify-center">
             {FILTERS.map((filter) => (
               <button
                 key={filter}
@@ -397,7 +397,7 @@ export default function GallerySection() {
         </div>
 
         {/* ── Dots ──────────────────────────────────────────────── */}
-        <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mt-5 md:mt-8 px-4">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-2 mt-5 md:mt-8 px-4">
           {filteredPhotos.map((p, i) => (
             <button
               key={p.id}
