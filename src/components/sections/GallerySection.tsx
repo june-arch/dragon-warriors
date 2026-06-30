@@ -292,13 +292,13 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionReveal>
           <div className="mb-6 md:mb-14">
-            <h4 className="eyebrow eyebrow-gold mb-2 md:mb-3 uppercase tracking-[0.3em] text-[10px] md:text-xs">
+            <h4 className="eyebrow eyebrow-gold mb-2 md:mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Galeri
             </h4>
-            <h2 className="font-display text-2xl md:text-5xl font-bold text-ash mt-1 md:mt-2">
+            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-1 md:mt-2">
               Setiap Momen, Sebuah Legenda
             </h2>
-            <p className="font-body text-ash-muted text-sm md:text-base max-w-lg mt-2 md:mt-3">
+            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3 md:mt-4">
               Dokumentasi latihan, turnamen, dan kebersamaan Dragon Warriors.
             </p>
           </div>
@@ -310,7 +310,7 @@ export default function GallerySection() {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-3 md:px-4 py-1.5 md:py-2 text-[10px] md:text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
+                className={`px-3 md:px-5 py-2.5 md:py-2 text-xs md:text-sm font-mono tracking-wider uppercase transition-all duration-300 ${
                   activeFilter === filter
                     ? 'bg-gold/20 text-gold-light border border-gold/40'
                     : 'bg-transparent text-ash-muted border border-transparent hover:border-gold/20 hover:text-ash'
@@ -318,7 +318,7 @@ export default function GallerySection() {
               >
                 {filter}
                 {filter !== 'Semua' && (
-                  <span className="ml-1 text-[9px] md:text-[10px] opacity-60">
+                  <span className="ml-1 text-[10px] md:text-xs opacity-60">
                     ({PHOTOS.filter((p) => p.category === filter).length})
                   </span>
                 )}
@@ -391,7 +391,7 @@ export default function GallerySection() {
           </button>
 
           {/* Counter */}
-          <div className="absolute -top-1 right-0 z-40 font-mono text-[10px] md:text-xs text-white/80 bg-black/50 px-2 md:px-2.5 py-0.5 md:py-1 rounded-full backdrop-blur-sm">
+          <div className="absolute -top-1 right-0 z-40 font-mono text-xs md:text-sm text-white/80 bg-black/50 px-2 md:px-2.5 py-0.5 md:py-1 rounded-full backdrop-blur-sm">
             {idx + 1} / {total}
           </div>
         </div>
@@ -418,7 +418,7 @@ export default function GallerySection() {
               href="https://instagram.com/dragonwarriors26"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-[10px] md:text-xs"
+              className="btn-secondary text-xs md:text-sm"
             >
               Lihat Lebih Banyak di Instagram
             </a>
