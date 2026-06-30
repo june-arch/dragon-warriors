@@ -78,7 +78,7 @@ export default function Footer() {
               alt="Dragon Warriors"
               className="h-12 md:h-14 w-auto mb-4"
             />
-            <p className="font-body text-ash-muted text-sm leading-relaxed max-w-[65ch]">
+            <p className="font-body text-ash-muted text-base leading-relaxed max-w-[65ch]">
               SSB Fajar Muda — Dragon Warriors adalah sekolah sepak bola yang berkomitmen membentuk karakter juara sejak dini. Berbasis di Depok, Jawa Barat.
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function Footer() {
             </h4>
             <div className="flex items-start gap-3">
               <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
-              <p className="font-body text-ash-muted text-sm leading-relaxed">
+              <p className="font-body text-ash-muted text-base leading-relaxed">
                 Lapangan Eden Sport Center,
                 Jl. Raya Pengasinan No.99, RT.04/RW.01,
                 Pengasinan, Kecamatan Sawangan,
@@ -97,7 +97,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="mt-6">
-              <h5 className="font-mono text-[10px] tracking-widest uppercase text-ash-muted mb-2">
+              <h5 className="font-mono text-xs tracking-widest uppercase text-ash-muted mb-2">
                 Jam Latihan
               </h5>
               <p className="font-body text-ash-muted text-sm">
@@ -151,7 +151,7 @@ export default function Footer() {
           <p className="font-body text-ash-muted text-xs">
             &copy; {new Date().getFullYear()} Dragon Warriors. All rights reserved.
           </p>
-          <p className="font-mono text-[10px] tracking-wider text-ash-muted/60">
+          <p className="font-mono text-xs tracking-wider text-ash-muted/60">
             SSB FAJAR MUDA — DEPOK
           </p>
         </div>

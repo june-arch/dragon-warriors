@@ -45,13 +45,13 @@ export default function SiapaKamiSection() {
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">
-            <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em]">
+            <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Siapa Kami
             </h4>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-ash mt-2">
+            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
               Dragon Warriors
             </h2>
-            <p className="font-body text-ash-muted text-base max-w-lg mt-3">
+            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
               Akademi sepak bola profesional berbasis di Depok dan Bogor.
             </p>
           </div>
@@ -60,13 +60,13 @@ export default function SiapaKamiSection() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           <SectionReveal className="lg:col-span-3">
             <div className="space-y-5">
-              <p className="font-body text-base text-ash-muted leading-relaxed">
+              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
                 <strong className="text-ash font-semibold">Dragon Warriors Football Academy</strong> adalah Sekolah Sepak Bola (SSB) yang berkomitmen membentuk karakter juara sejak dini. Berbasis di Depok dan Bogor, kami melayani kelompok usia U9 hingga U12 dengan program latihan yang terstruktur dan menyenangkan.
               </p>
-              <p className="font-body text-base text-ash-muted leading-relaxed">
+              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
                 Didirikan dengan visi melahirkan pemain sepak bola yang tidak hanya terampil secara teknik, tetapi juga memiliki mental juara, disiplin tinggi, dan sportivitas yang kuat. Setiap pemain dibimbing oleh coach bersertifikasi resmi PSSI.
               </p>
-              <p className="font-body text-base text-ash-muted leading-relaxed">
+              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
                 Dengan hombase di Lapangan Eden Sport Center, Pengasinan — Depok, kami rutin mengadakan latihan setiap Senin dan Rabu, serta aktif mengikuti turnamen dan friendly match untuk mengasah kemampuan bertanding para pemain.
               </p>
 
@@ -94,42 +94,42 @@ export default function SiapaKamiSection() {
               </h3>
               <div className="space-y-4">
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-light/70 mb-1">
+                  <p className="font-mono text-xs tracking-[0.25em] uppercase text-gold-light/70 mb-1">
                     Instagram
                   </p>
                   <a
                     href="https://instagram.com/dragonwarriors26"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-body text-sm text-ash hover:text-gold-light transition-colors"
+                    className="font-body text-base text-ash hover:text-gold-light transition-colors"
                   >
                     @dragonwarriors26
                   </a>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-light/70 mb-1">
+                  <p className="font-mono text-xs tracking-[0.25em] uppercase text-gold-light/70 mb-1">
                     Email
                   </p>
-                  <p className="font-body text-sm text-ash-muted">
+                  <p className="font-body text-base text-ash-muted">
                     dragonwarriors266@gmail.com
                   </p>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-light/70 mb-1">
+                  <p className="font-mono text-xs tracking-[0.25em] uppercase text-gold-light/70 mb-1">
                     Kontak (Si Draco)
                   </p>
                   <a
                     href="tel:+6282112388428"
-                    className="font-mono text-sm text-cyan-dim hover:text-cyan transition-colors"
+                    className="font-mono text-base text-cyan-dim hover:text-cyan transition-colors"
                   >
                     0821 — 1238 — 8428
                   </a>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-light/70 mb-1">
+                  <p className="font-mono text-xs tracking-[0.25em] uppercase text-gold-light/70 mb-1">
                     Hombase
                   </p>
-                  <p className="font-body text-sm text-ash-muted">
+                  <p className="font-body text-base text-ash-muted">
                     Lapangan Eden Sport Center
                     <br />
                     Jl. Raya Pengasinan, Depok
@@ -163,8 +163,8 @@ export default function SiapaKamiSection() {
                   className="card-surface p-6 text-center"
                 >
                   <Icon size={24} className="text-gold-light mx-auto mb-4" />
-                  <h4 className="font-display font-bold text-sm text-ash mb-2">{v.title}</h4>
-                  <p className="font-body text-xs text-ash-muted leading-relaxed">{v.desc}</p>
+                  <h4 className="font-display font-bold text-base text-ash mb-2">{v.title}</h4>
+                  <p className="font-body text-sm text-ash-muted leading-relaxed">{v.desc}</p>
                 </motion.div>
               )
             })}

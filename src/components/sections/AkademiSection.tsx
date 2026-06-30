@@ -29,13 +29,13 @@ export default function AkademiSection() {
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">
-            <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em]">
+            <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Akademi
             </h4>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-ash mt-2">
+            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
               Program Latihan
             </h2>
-            <p className="font-body text-ash-muted text-base max-w-lg mt-3">
+            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
               Program pembinaan usia dini yang terstruktur untuk setiap kelompok umur.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function AkademiSection() {
                 <GraduationCap size={20} className="text-gold-light" />
                 <h3 className="font-display font-bold text-lg text-ash">Metode Latihan</h3>
               </div>
-              <p className="font-body text-sm text-ash-muted leading-relaxed">
+              <p className="font-body text-base text-ash-muted leading-relaxed">
                 Program latihan Dragon Warriors dirancang untuk mengembangkan aspek teknik, taktik, fisik, dan mental secara seimbang. Setiap sesi mencakup:
               </p>
               <ul className="space-y-3">
@@ -58,7 +58,7 @@ export default function AkademiSection() {
                   'Game #3 — Melatih kecepatan & kelincahan',
                   'Game #4 — Melatih kefokusan & teknik individu',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-body text-sm text-ash-muted">
+                  <li key={item} className="flex items-start gap-3 font-body text-base text-ash-muted">
                     <Target size={14} className="text-fire mt-0.5 shrink-0" />
                     {item}
                   </li>
@@ -73,7 +73,7 @@ export default function AkademiSection() {
                 <Users size={20} className="text-gold-light" />
                 <h3 className="font-display font-bold text-lg text-ash">Pemulihan Pasca-Latihan</h3>
               </div>
-              <p className="font-body text-sm text-ash-muted leading-relaxed">
+              <p className="font-body text-base text-ash-muted leading-relaxed">
                 Kami menerapkan panduan nutrisi pemulihan untuk memastikan pemain pulih optimal dan siap latihan berikutnya:
               </p>
               <ul className="space-y-3">
@@ -84,7 +84,7 @@ export default function AkademiSection() {
                   'Makanan energi cepat: Pisang, yogurt, buah',
                   'Target makan dalam 1 jam setelah latihan',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-body text-sm text-ash-muted">
+                  <li key={item} className="flex items-start gap-3 font-body text-base text-ash-muted">
                     <ChevronRight size={14} className="text-cyan-dim mt-0.5 shrink-0" />
                     {item}
                   </li>
@@ -120,7 +120,7 @@ export default function AkademiSection() {
                 </span>
                 <p className="font-body text-xs text-ash-muted mb-2">{k.usia}</p>
                 <div className="w-6 h-[1px] bg-gold/30 mb-3" />
-                <p className="font-mono text-[11px] text-cyan-dim mb-1">{k.fokus}</p>
+                <p className="font-mono text-xs text-cyan-dim mb-1">{k.fokus}</p>
                 <p className="font-body text-xs text-ash-muted/70">{k.jadwal}</p>
               </motion.div>
             ))}

@@ -48,13 +48,13 @@ export default function BeritaSection() {
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">
-            <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em]">
+            <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Berita
             </h4>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-ash mt-2">
+            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
               Kabar Terbaru
             </h2>
-            <p className="font-body text-ash-muted text-base max-w-lg mt-3">
+            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
               Update kegiatan dan informasi terbaru Dragon Warriors dari Instagram.
             </p>
           </div>
@@ -79,18 +79,18 @@ export default function BeritaSection() {
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-cyan/10 flex items-center justify-center">
                     <Icon size={18} className="text-cyan-dim" />
                   </div>
-                  <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-cyan-dim">
+                  <span className="font-mono text-xs tracking-[0.25em] uppercase text-cyan-dim">
                     {item.category}
                   </span>
                 </div>
                 <h3 className="font-display font-bold text-lg md:text-xl text-ash group-hover:text-gold-light transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="font-body text-ash-muted text-sm mt-3 leading-relaxed flex-1">
+                <p className="font-body text-ash-muted text-base mt-3 leading-relaxed flex-1">
                   {item.excerpt}
                 </p>
                 <div className="flex items-center justify-between mt-5 pt-4 border-t border-gold/20">
-                  <span className="flex items-center gap-1.5 font-mono text-[11px] text-ash-muted">
+                  <span className="flex items-center gap-1.5 font-mono text-xs text-ash-muted">
                     <Calendar size={12} />
                     {item.date}
                   </span>
@@ -98,7 +98,7 @@ export default function BeritaSection() {
                     href="https://instagram.com/dragonwarriors26"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 font-mono text-[11px] text-gold-light/60 hover:text-gold-light transition-colors"
+                    className="flex items-center gap-1 font-mono text-xs text-gold-light/60 hover:text-gold-light transition-colors"
                   >
                     IG <ArrowRight size={12} />
                   </a>

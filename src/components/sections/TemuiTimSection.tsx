@@ -56,13 +56,13 @@ export default function TemuiTimSection() {
       <div className="max-w-7xl mx-auto">
         <SectionReveal>
           <div className="mb-10 md:mb-14">
-            <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em]">
+            <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Temui Tim
             </h4>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-ash mt-2">
+            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
               Para Pelatih
             </h2>
-            <p className="font-body text-ash-muted text-base max-w-lg mt-3">
+            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
               Berkenalan dengan para coach Dragon Warriors yang berpengalaman dan bersertifikasi.
             </p>
           </div>
@@ -89,14 +89,14 @@ export default function TemuiTimSection() {
                 <h3 className="font-display font-bold text-xl text-ash mt-5">
                   {orang.nama}
                 </h3>
-                <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-gold-light/70 mt-2">
+                <p className="font-mono text-xs tracking-[0.2em] uppercase text-gold-light/70 mt-2">
                   {orang.jabatan}
                 </p>
-                <span className="inline-block mt-3 px-3 py-1 font-mono text-[10px] tracking-wider text-cyan-dim border border-cyan-dim/20 rounded-sm">
+                <span className="inline-block mt-3 px-3 py-1 font-mono text-xs tracking-wider text-cyan-dim border border-cyan-dim/20 rounded-sm">
                   {orang.lisensi}
                 </span>
                 <div className="w-8 h-[1px] bg-gold/30 mx-auto my-4" />
-                <p className="font-body text-sm text-ash-muted leading-relaxed italic flex-1">
+                <p className="font-body text-base text-ash-muted leading-relaxed italic flex-1">
                   &ldquo;{orang.motto}&rdquo;
                 </p>
               </motion.div>

@@ -74,7 +74,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5, duration: 0.6 }}
         className="absolute bottom-8 inset-x-0 z-20 flex flex-col items-center gap-1.5 pointer-events-none"
       >
-        <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-ash-muted">
+        <span className="font-mono text-xs tracking-[0.25em] uppercase text-ash-muted">
           Scroll to explore
         </span>
         <ChevronDown size={16} className="text-cyan-dim animate-scroll-hint" />
