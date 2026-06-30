@@ -10,6 +10,7 @@ import TemuiTimSection from './components/sections/TemuiTimSection'
 import SiapaKamiSection from './components/sections/SiapaKamiSection'
 import AkademiSection from './components/sections/AkademiSection'
 import ScrollProgress from './components/ui/ScrollProgress'
+import FloatingWhatsApp from './components/ui/FloatingWhatsApp'
 import { CustomCursor } from './components/cursor'
 
 function LoadSequence({ onComplete }: { onComplete: () => void }) {
@@ -43,6 +44,7 @@ function App() {
         <ScrollProgress />
         <Navbar />
         <CustomCursor />
+        <FloatingWhatsApp />
 
         <main>
           <HeroSection />
