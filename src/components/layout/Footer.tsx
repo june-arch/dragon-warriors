@@ -53,6 +53,23 @@ export default function Footer() {
         </div>
       </div>
 
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 md:py-8">
+          <div className="w-full h-[250px] md:h-[300px] border border-gold/20 overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=Eden+Sports+Center+Depok&output=embed&z=15"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Dragon Warriors — Eden Sport Center Depok"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-18">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           <div>
