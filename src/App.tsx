@@ -4,6 +4,11 @@ import Footer from './components/layout/Footer'
 import HeroSection from './components/sections/HeroSection'
 import MerchandiseSection from './components/sections/MerchandiseSection'
 import GallerySection from './components/sections/GallerySection'
+import BeritaSection from './components/sections/BeritaSection'
+import JadwalSection from './components/sections/JadwalSection'
+import TemuiTimSection from './components/sections/TemuiTimSection'
+import SiapaKamiSection from './components/sections/SiapaKamiSection'
+import AkademiSection from './components/sections/AkademiSection'
 import ScrollProgress from './components/ui/ScrollProgress'
 import { CustomCursor } from './components/cursor'
 
@@ -43,6 +48,11 @@ function App() {
           <HeroSection />
           <MerchandiseSection />
           <GallerySection />
+          <BeritaSection />
+          <TemuiTimSection />
+          <JadwalSection />
+          <SiapaKamiSection />
+          <AkademiSection />
         </main>
 
         <Footer />

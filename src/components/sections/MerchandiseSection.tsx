@@ -40,6 +40,25 @@ function TiltCard({ children }: { children: React.ReactNode }) {
   )
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 35 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeOut' as const },
+  },
+}
+
 export default function MerchandiseSection() {
   return (
     <section id="merchandise" data-testid="merchandise-section" className="section-padding bg-bg-surface relative z-[1]">
@@ -58,14 +77,17 @@ export default function MerchandiseSection() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-          {ITEMS.map((item, i) => (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5"
+        >
+          {ITEMS.map((item) => (
             <motion.div
               key={item.name}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
+              variants={itemVariants}
             >
               <TiltCard>
                 <div className="aspect-square bg-gradient-to-br from-gold/20 via-blood/10 to-bg-void flex items-center justify-center">
@@ -82,13 +104,13 @@ export default function MerchandiseSection() {
               </TiltCard>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <SectionReveal delay={0.3}>
           <div className="mt-10 text-center">
-            <a href="#" className="btn-secondary text-xs">
+            <button className="btn-secondary text-xs cursor-pointer">
               Lihat Semua Koleksi
-            </a>
+            </button>
           </div>
         </SectionReveal>
       </div>

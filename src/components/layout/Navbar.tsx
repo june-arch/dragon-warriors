@@ -55,7 +55,7 @@ function DesktopNavItem({ item }: { item: NavItem }) {
               initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
-              transition={{ duration: 0.15 }}
+              transition={{ type: 'spring', stiffness: 350, damping: 25 }}
               className="absolute top-full left-0 mt-1 w-52 bg-bg-raised border border-gold/20 shadow-xl shadow-black/40"
             >
               {item.children.map((child) => (
