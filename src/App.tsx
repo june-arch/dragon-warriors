@@ -9,6 +9,7 @@ import JadwalSection from './components/sections/JadwalSection'
 import TemuiTimSection from './components/sections/TemuiTimSection'
 import SiapaKamiSection from './components/sections/SiapaKamiSection'
 import AkademiSection from './components/sections/AkademiSection'
+import DaftarSection from './components/sections/DaftarSection'
 import ScrollProgress from './components/ui/ScrollProgress'
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp'
 import { CustomCursor } from './components/cursor'
@@ -55,6 +56,7 @@ function App() {
           <JadwalSection />
           <SiapaKamiSection />
           <AkademiSection />
+          <DaftarSection />
         </main>
 
         <Footer />
