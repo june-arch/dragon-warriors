@@ -32,10 +32,10 @@ export default function AkademiSection() {
             <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Akademi
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-2">
               Program Latihan
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3">
               Program pembinaan usia dini yang terstruktur untuk setiap kelompok umur.
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function AkademiSection() {
             <div className="space-y-5">
               <div className="flex items-center gap-3">
                 <GraduationCap size={20} className="text-gold-light" />
-                <h3 className="font-display font-bold text-lg text-ash">Metode Latihan</h3>
+                <h3 className="font-display font-bold fluid-h4 text-ash">Metode Latihan</h3>
               </div>
               <p className="font-body text-base text-ash-muted leading-relaxed">
                 Program latihan Dragon Warriors dirancang untuk mengembangkan aspek teknik, taktik, fisik, dan mental secara seimbang. Setiap sesi mencakup:
@@ -71,7 +71,7 @@ export default function AkademiSection() {
             <div className="space-y-5">
               <div className="flex items-center gap-3">
                 <Users size={20} className="text-gold-light" />
-                <h3 className="font-display font-bold text-lg text-ash">Pemulihan Pasca-Latihan</h3>
+                <h3 className="font-display font-bold fluid-h4 text-ash">Pemulihan Pasca-Latihan</h3>
               </div>
               <p className="font-body text-base text-ash-muted leading-relaxed">
                 Kami menerapkan panduan nutrisi pemulihan untuk memastikan pemain pulih optimal dan siap latihan berikutnya:
@@ -98,7 +98,7 @@ export default function AkademiSection() {
           <SectionReveal>
             <div className="flex items-center gap-3 mb-8">
               <Calendar size={20} className="text-gold-light" />
-              <h3 className="font-display font-bold text-lg text-ash">Kelompok Usia</h3>
+              <h3 className="font-display font-bold fluid-h4 text-ash">Kelompok Usia</h3>
             </div>
           </SectionReveal>
 

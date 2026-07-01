@@ -295,10 +295,10 @@ export default function GallerySection() {
             <h4 className="eyebrow eyebrow-gold mb-2 md:mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Galeri
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-1 md:mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-1 md:mt-2">
               Setiap Momen, Sebuah Legenda
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3 md:mt-4">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3 md:mt-4">
               Dokumentasi latihan, turnamen, dan kebersamaan Dragon Warriors.
             </p>
           </div>

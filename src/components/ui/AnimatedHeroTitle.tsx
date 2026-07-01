@@ -61,7 +61,7 @@ export default function AnimatedHeroTitle({ startDelay = 0 }: Props) {
   }
 
   return (
-    <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-[0.15em] leading-none">
+    <h1 className="font-display fluid-h1 font-black tracking-[0.15em] leading-none">
       <span className="sr-only">DRAGON WARRIORS</span>
 
       <span aria-hidden="true" className="flex flex-wrap items-baseline justify-center gap-x-4 md:gap-x-6">

@@ -92,10 +92,10 @@ export default function JadwalSection() {
             <h4 className="eyebrow eyebrow-fire mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Jadwal
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-2">
               Jam Latihan
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3">
               Latihan rutin setiap Senin & Rabu. Ayo bergabung dan jadi bagian dari Dragon Warriors!
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function JadwalSection() {
 
         <SectionReveal delay={0.3}>
           <div className="mt-14">
-            <h3 className="font-display text-xl md:text-2xl font-bold text-ash mb-3">
+            <h3 className="font-display fluid-h3 font-bold text-ash mb-3">
               Acara Mendatang
             </h3>
             <div className="border border-gold/20 p-6 md:p-8 hover:border-gold/40 transition-colors duration-300 rounded-xl">

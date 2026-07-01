@@ -51,10 +51,10 @@ export default function BeritaSection() {
             <h4 className="eyebrow eyebrow-cyan mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Berita
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-2">
               Kabar Terbaru
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3">
               Update kegiatan dan informasi terbaru Dragon Warriors dari Instagram.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function BeritaSection() {
                     {item.category}
                   </span>
                 </div>
-                <h3 className="font-display font-bold text-lg md:text-xl text-ash group-hover:text-gold-light transition-colors duration-300">
+                <h3 className="font-display font-bold fluid-h4 text-ash group-hover:text-gold-light transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="font-body text-ash-muted text-base mt-3 leading-relaxed flex-1">

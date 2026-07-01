@@ -48,10 +48,10 @@ export default function SiapaKamiSection() {
             <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Siapa Kami
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-2">
               Dragon Warriors
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3">
               Akademi sepak bola profesional berbasis di Depok dan Bogor.
             </p>
           </div>
@@ -60,13 +60,13 @@ export default function SiapaKamiSection() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12">
           <SectionReveal className="lg:col-span-3">
             <div className="space-y-5">
-              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
+              <p className="font-body fluid-body text-ash-muted leading-relaxed">
                 <strong className="text-ash font-semibold">Dragon Warriors Football Academy</strong> adalah Sekolah Sepak Bola (SSB) yang berkomitmen membentuk karakter juara sejak dini. Berbasis di Depok dan Bogor, kami melayani kelompok usia U9 hingga U12 dengan program latihan yang terstruktur dan menyenangkan.
               </p>
-              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
+              <p className="font-body fluid-body text-ash-muted leading-relaxed">
                 Didirikan dengan visi melahirkan pemain sepak bola yang tidak hanya terampil secara teknik, tetapi juga memiliki mental juara, disiplin tinggi, dan sportivitas yang kuat. Setiap pemain dibimbing oleh coach bersertifikasi resmi PSSI.
               </p>
-              <p className="font-body text-base md:text-md text-ash-muted leading-relaxed">
+              <p className="font-body fluid-body text-ash-muted leading-relaxed">
                 Dengan hombase di Lapangan Eden Sport Center, Pengasinan — Depok, kami rutin mengadakan latihan setiap Senin dan Rabu, serta aktif mengikuti turnamen dan friendly match untuk mengasah kemampuan bertanding para pemain.
               </p>
 
@@ -142,7 +142,7 @@ export default function SiapaKamiSection() {
 
         <div className="mt-16">
           <SectionReveal>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-ash mb-8 text-center">
+            <h3 className="font-display fluid-h3 font-bold text-ash mb-8 text-center">
               Nilai-Nilai Kami
             </h3>
           </SectionReveal>

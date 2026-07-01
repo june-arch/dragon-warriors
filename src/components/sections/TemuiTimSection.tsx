@@ -59,10 +59,10 @@ export default function TemuiTimSection() {
             <h4 className="eyebrow eyebrow-gold mb-3 uppercase tracking-[0.3em] text-xs md:text-sm">
               Temui Tim
             </h4>
-            <h2 className="font-display text-xl md:text-4xl font-bold text-ash mt-2">
+            <h2 className="font-display fluid-h2 font-bold text-ash mt-2">
               Para Pelatih
             </h2>
-            <p className="font-body text-ash-muted text-base md:text-md max-w-lg mt-3">
+            <p className="font-body text-ash-muted fluid-body max-w-lg mt-3">
               Berkenalan dengan para coach Dragon Warriors yang berpengalaman dan bersertifikasi.
             </p>
           </div>

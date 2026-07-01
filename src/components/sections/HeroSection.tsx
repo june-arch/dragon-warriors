@@ -47,7 +47,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-            className="mt-4 md:mt-6 text-ash-muted font-body text-base md:text-lg max-w-xl mx-auto leading-relaxed"
+            className="mt-4 md:mt-6 text-ash-muted font-body fluid-body-lg max-w-xl mx-auto leading-relaxed"
           >
             Tempat para pejuang muda menemukan sayapnya.
           </motion.p>
