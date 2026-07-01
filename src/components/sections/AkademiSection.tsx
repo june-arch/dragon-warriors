@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import SectionReveal from '../ui/SectionReveal'
 import { GraduationCap, Users, Calendar, Target, ChevronRight } from 'lucide-react'
 
@@ -129,14 +130,12 @@ export default function AkademiSection() {
 
         <SectionReveal delay={0.3}>
           <div className="mt-12 text-center">
-            <a
-              href="https://instagram.com/dragonwarriors26"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/daftar"
               className="btn-primary text-xs"
             >
               Daftar Sekarang
-            </a>
+            </Link>
           </div>
         </SectionReveal>
       </div>

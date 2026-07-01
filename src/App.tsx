@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import HeroSection from './components/sections/HeroSection'
@@ -9,10 +10,11 @@ import JadwalSection from './components/sections/JadwalSection'
 import TemuiTimSection from './components/sections/TemuiTimSection'
 import SiapaKamiSection from './components/sections/SiapaKamiSection'
 import AkademiSection from './components/sections/AkademiSection'
-import DaftarSection from './components/sections/DaftarSection'
 import ScrollProgress from './components/ui/ScrollProgress'
+import ScrollToTop from './components/ui/ScrollToTop'
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp'
 import { CustomCursor } from './components/cursor'
+import DaftarPage from './components/pages/DaftarPage'
 
 function LoadSequence({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -34,34 +36,45 @@ function LoadSequence({ onComplete }: { onComplete: () => void }) {
   )
 }
 
+function HomePage() {
+  return (
+    <>
+      <ScrollProgress />
+      <Navbar />
+      <CustomCursor />
+      <FloatingWhatsApp />
+
+      <main>
+        <HeroSection />
+        <MerchandiseSection />
+        <GallerySection />
+        <BeritaSection />
+        <TemuiTimSection />
+        <JadwalSection />
+        <SiapaKamiSection />
+        <AkademiSection />
+      </main>
+
+      <Footer />
+    </>
+  )
+}
+
 function App() {
   const [loading, setLoading] = useState(true)
 
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
       {loading && <LoadSequence onComplete={() => setLoading(false)} />}
 
       <div className={`min-h-screen bg-bg-void overflow-x-hidden ${loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
-        <ScrollProgress />
-        <Navbar />
-        <CustomCursor />
-        <FloatingWhatsApp />
-
-        <main>
-          <HeroSection />
-          <MerchandiseSection />
-          <GallerySection />
-          <BeritaSection />
-          <TemuiTimSection />
-          <JadwalSection />
-          <SiapaKamiSection />
-          <AkademiSection />
-          <DaftarSection />
-        </main>
-
-        <Footer />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/daftar" element={<DaftarPage />} />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   )
 }
 

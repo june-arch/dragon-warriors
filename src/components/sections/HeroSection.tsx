@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
 import DragonCanvas from '../dragon/DragonCanvas'
@@ -58,9 +59,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
           >
-            <a href="#daftar" className="btn-primary">
+            <Link to="/daftar" className="btn-primary">
               Daftar Sekarang
-            </a>
+            </Link>
             <a href="#program" className="btn-secondary">
               Kenali Kami
             </a>
