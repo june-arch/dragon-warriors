@@ -167,7 +167,6 @@ export default function AdminDashboard() {
                 <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
                   {(['akteKelahiran', 'kk', 'nisn', 'kia'] as const).map((key) => {
                     const url = siswa[`${key}Url` as keyof SiswaResponse] as string | null
-                    const fileName = siswa[key] as string | null
                     return (
                       <div key={key}>
                         {url ? (

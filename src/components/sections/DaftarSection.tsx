@@ -72,15 +72,11 @@ function formatSize(bytes: number) {
 }
 
 function DropzoneInput({
-  label,
-  desc,
   file,
   onFile,
   onRemove,
   accept,
 }: {
-  label: string
-  desc: string
   file: File | null
   onFile: (f: File) => void
   onRemove: () => void
@@ -377,8 +373,6 @@ export default function DaftarSection() {
                   </label>
                   <p className="text-xs text-ash-muted/70 mb-2">{field.desc}</p>
                   <DropzoneInput
-                    label={field.label}
-                    desc={field.desc}
                     file={files[field.key]}
                     onFile={(f) => setFile(field.key, f)}
                     onRemove={() => setFile(field.key, null)}
