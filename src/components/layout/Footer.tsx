@@ -79,7 +79,7 @@ export default function Footer() {
               className="h-12 md:h-14 w-auto mb-4"
             />
             <p className="font-body text-ash-muted text-base leading-relaxed max-w-[65ch]">
-              SSB Fajar Muda — Dragon Warriors adalah sekolah sepak bola yang berkomitmen membentuk karakter juara sejak dini. Berbasis di Depok, Jawa Barat.
+              SSB Dragon Warriors adalah sekolah sepak bola yang berkomitmen membentuk karakter juara sejak dini. Berbasis di Depok, Jawa Barat.
             </p>
           </div>
 
