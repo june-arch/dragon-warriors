@@ -16,6 +16,7 @@ import FloatingWhatsApp from './components/ui/FloatingWhatsApp'
 import { CustomCursor } from './components/cursor'
 import DaftarPage from './components/pages/DaftarPage'
 import AdminDashboard from './components/pages/AdminDashboard'
+import LoginPage from './components/pages/LoginPage'
 
 function LoadSequence({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -73,6 +74,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/daftar" element={<DaftarPage />} />
+          <Route path="/admin/login" element={<LoginPage />} />
           <Route path="/admin/siswa" element={<AdminDashboard />} />
         </Routes>
       </div>

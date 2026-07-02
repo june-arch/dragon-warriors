@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Users, FileDown, Eye, Loader2, FileText, Calendar, Phone, User } from 'lucide-react'
-import { getSiswaList, type SiswaResponse } from '../../lib/api'
+import { Users, FileDown, Eye, Loader2, FileText, Calendar, Phone, User, LogOut, Shield } from 'lucide-react'
+import { getSiswaList, isAuthenticated, getStoredUser, clearAuth, type SiswaResponse } from '../../lib/api'
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('id-ID', {
@@ -34,16 +35,28 @@ const FILE_LABELS: Record<string, string> = {
 }
 
 export default function AdminDashboard() {
+  const navigate = useNavigate()
   const [data, setData] = useState<SiswaResponse[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
+  const user = getStoredUser()
+
   useEffect(() => {
+    if (!isAuthenticated()) {
+      navigate('/admin/login', { replace: true })
+      return
+    }
     getSiswaList()
       .then(setData)
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false))
-  }, [])
+  }, [navigate])
+
+  const handleLogout = () => {
+    clearAuth()
+    navigate('/admin/login', { replace: true })
+  }
 
   return (
     <div className="min-h-screen bg-bg-void">
@@ -56,12 +69,20 @@ export default function AdminDashboard() {
               Admin Dashboard
             </span>
           </div>
-          <a
-            href="/"
-            className="text-xs text-ash-muted hover:text-gold-light transition-colors"
-          >
-            &larr; Kembali ke Beranda
-          </a>
+          <div className="flex items-center gap-4">
+            {user && (
+              <span className="text-xs text-ash-muted hidden sm:flex items-center gap-1.5">
+                <Shield size={12} />
+                {user.name}
+              </span>
+            )}
+            <button onClick={handleLogout} className="text-xs text-ash-muted hover:text-red-400 transition-colors flex items-center gap-1.5">
+              <LogOut size={14} /> Keluar
+            </button>
+            <a href="/" className="text-xs text-ash-muted hover:text-gold-light transition-colors">
+              &larr; Beranda
+            </a>
+          </div>
         </div>
       </div>
 
@@ -117,7 +138,6 @@ export default function AdminDashboard() {
                 className="border border-gold/10 rounded-xl p-5 bg-bg-surface/20 hover:border-gold/20 transition-colors"
               >
                 <div className="flex items-start justify-between flex-wrap gap-3">
-                  {/* Info */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="font-display font-bold text-ash text-lg">{siswa.nama}</h3>
