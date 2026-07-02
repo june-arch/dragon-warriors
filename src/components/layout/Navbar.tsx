@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -31,9 +32,9 @@ function DesktopNavItem({ item }: { item: NavItem }) {
   if (item.isCTA) {
     return (
       <li>
-        <a href={item.href} className="btn-primary text-xs !px-5 !py-2">
+        <Link to="/daftar" className="btn-primary text-xs !px-5 !py-2">
           {item.label}
-        </a>
+        </Link>
       </li>
     )
   }
@@ -141,13 +142,13 @@ export default function Navbar() {
               {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
                   {item.isCTA ? (
-                    <a
-                      href={item.href}
+                    <Link
+                      to="/daftar"
                       onClick={() => setOpen(false)}
                       className="btn-primary text-xs !px-5 !py-2.5 w-full justify-center"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ) : item.children ? (
                     <div>
                       <button

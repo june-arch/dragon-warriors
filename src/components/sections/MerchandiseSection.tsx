@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useRef, useState, type MouseEvent } from 'react'
+import { Link } from 'react-router-dom'
 import SectionReveal from '../ui/SectionReveal'
 
 const ITEMS = [
@@ -108,9 +109,9 @@ export default function MerchandiseSection() {
 
         <SectionReveal delay={0.3}>
           <div className="mt-10 text-center">
-            <button className="btn-secondary text-xs cursor-pointer">
+            <Link to="/daftar" className="btn-secondary text-xs cursor-pointer inline-block">
               Lihat Semua Koleksi
-            </button>
+            </Link>
           </div>
         </SectionReveal>
       </div>
